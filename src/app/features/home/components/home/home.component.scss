@@ -1,0 +1,13 @@
+.card-text{
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+}
+
+.card{
+    cursor: pointer;
+}
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
