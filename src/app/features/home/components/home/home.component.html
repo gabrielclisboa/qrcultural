@@ -5,61 +5,14 @@
     </div>
   </div>
 
-  <div class="row justify-content-between mt-2">
-
-    <div class="card shadow" style="width: 19rem;">
-      <img src="assets/casaazul.png" class="mt-3" alt="...">
-      <div class="card-body">
-        <h5 class="card-title text-center ">Casa Azul</h5>
-        <p class="card-text lh-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod at lorem vitae
-          auctor. Vestibulum convallis ligula vitae aliquam mollis.
-          Integer nulla sem, blandit in turpis quis, commodo elementum urna. Nulla facilisi. Maecenas bibendum semper
-          diam, sed maximus leo volutpat vitae.
-          Donec massa libero, suscipit sed ultricies sit amet, ultricies sed sem. Aenean lectus leo, ultricies sit amet
-          luctus eget, vehicula in risus. Duis eget finibus erat, nec fringilla nisl.</p>
+  <div class="row justify-content-center mt-3 g-4">
+    <ng-container *ngIf="cards().length > 0; else noCards">
+      <div *ngFor="let card of cards();" class="col-md-4">
+        <app-card [isAdminMode]="isLoggedIn" [card]="card"></app-card>
       </div>
-    </div>
-
-
-    <div class="card shadow" style="width: 19rem;">
-      <img src="assets/casaazul.png" class="mt-3" alt="...">
-      <div class="card-body">
-        <h5 class="card-title text-center">Casa Rosa</h5>
-        <p class="card-text lh-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod at lorem vitae
-          auctor. Vestibulum convallis ligula vitae aliquam mollis.
-          Integer nulla sem, blandit in turpis quis, commodo elementum urna. Nulla facilisi. Maecenas bibendum semper
-          diam, sed maximus leo volutpat vitae.
-          Donec massa libero, suscipit sed ultricies sit amet, ultricies sed sem. Aenean lectus leo, ultricies sit amet
-          luctus eget, vehicula in risus. Duis eget finibus erat, nec fringilla nisl.</p>
-      </div>
-    </div>
-
-    <div class="card shadow" style="width: 19rem;">
-      <img src="assets/centroculturalcontagem.png" class="mt-3" alt="...">
-      <div class="card-body">
-        <h5 class="card-title text-center">Centro Cultural de Contagem</h5>
-        <p class="card-text lh-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod at lorem vitae
-          auctor. Vestibulum convallis ligula vitae aliquam mollis.
-          Integer nulla sem, blandit in turpis quis, commodo elementum urna. Nulla facilisi. Maecenas bibendum semper
-          diam, sed maximus leo volutpat vitae.
-          Donec massa libero, suscipit sed ultricies sit amet, ultricies sed sem. Aenean lectus leo, ultricies sit amet
-          luctus eget, vehicula in risus. Duis eget finibus erat, nec fringilla nisl.</p>
-      </div>
-    </div>
-
-    <div class="card shadow" style="width: 19rem;">
-      <img src="assets/igrejasaogoncalo.png" class="mt-3" alt="...">
-      <div class="card-body">
-        <h5 class="card-title text-center">Igreja Matriz de São Gonçalo</h5>
-        <p class="card-text lh-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod at lorem vitae
-          auctor. Vestibulum convallis ligula vitae aliquam mollis.
-          Integer nulla sem, blandit in turpis quis, commodo elementum urna. Nulla facilisi. Maecenas bibendum semper
-          diam, sed maximus leo volutpat vitae.
-          Donec massa libero, suscipit sed ultricies sit amet, ultricies sed sem. Aenean lectus leo, ultricies sit amet
-          luctus eget, vehicula in risus. Duis eget finibus erat, nec fringilla nisl.</p>
-      </div>
-    </div>
-
-
+    </ng-container>
+    <ng-template #noCards>
+      <p>Nenhum Monumento Cadastrado</p>
+    </ng-template>
   </div>
 </div>

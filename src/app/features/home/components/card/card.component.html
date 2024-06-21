@@ -1,0 +1,11 @@
+<div [routerLink]="['/monumento/'+card().monumentoId]" class="card shadow">
+    <img [src]="'data:image/jpeg;base64,' + card().imagem" class="m-3" alt="...">
+    <div class="card-body">
+        <h5 class="card-title text-center">{{card().titulo}}</h5>
+        <p class="card-text lh-sm">{{card().descricao}}</p>
+    </div>
+    <div *ngIf="enableEditDelete()" class="card-footer d-flex justify-content-around">
+        <button (click)="onDelete($event, card().monumentoId)"class="remover">Remover</button>
+        <button (click)="onEdit($event, card().monumentoId)"class="editar">Editar</button>
+    </div>
+</div>

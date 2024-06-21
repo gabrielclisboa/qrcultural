@@ -9,8 +9,17 @@
     text-decoration: none;
 };
 
+body{
+    overflow-x: hidden;
+}
+
 
 h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 2em; 
 }
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

@@ -1,0 +1,28 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title">Login Administração</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()"></button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="mb-3">
+        <label for="login-username" class="form-label">Username</label>
+        <input type="text" id="login-username" class="form-control" formControlName="username">
+        <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched" class="text-danger">
+          É necessário informar um usuário.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="login-password" class="form-label">Password</label>
+        <input type="password" id="login-password" class="form-control" formControlName="password">
+        <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="text-danger">
+          É necessário informar uma senha.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

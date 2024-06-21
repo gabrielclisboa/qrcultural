@@ -1,0 +1,69 @@
+<div class="container mt-5" *ngIf="monumento">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>{{monumento().card.titulo}}</h1>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-3 g-4">
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img-fluid" [src]="'data:image/jpeg;base64,' + monumento().imagemPrincipal"
+                    alt="Imagem Principal" />
+            </div>
+            <div class="col-md-6">
+                <h2 class="my-3">Endereço</h2>
+                <p class="my-3">{{monumento().endereco}}</p>
+                <h2 class="my-3">Horário de Funcionamento</h2>
+                <p>{{monumento().horarioFuncionamento}}</p>
+                <h2 class="my-3">Entrada</h2>
+                <p class="my-3">{{monumento().entrada}}</p>
+            </div>
+        </div>
+
+        <div class="row text-center mt-4">
+            <div class="col-md-6">
+                <h2>Contexto Histórico</h2>
+                <p class="fs-5">{{monumento().contextoHistorico}}</p>
+            </div>
+            <div class="col-md-6">
+
+                <h2>Galeria de Fotos</h2>
+                <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img [src]="'data:image/jpeg;base64,' + monumento().carrosel1" class="d-block w-100"
+                                alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img [src]="'data:image/jpeg;base64,' + monumento().carrosel2" class="d-block w-100"
+                                alt="..." />
+                        </div>
+                        <div class="carousel-item">
+                            <img [src]="'data:image/jpeg;base64,' + monumento().carrosel3" class="d-block w-100"
+                                alt="..." />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev custom-carousel-control" type="button"
+                        data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-chevron-compact-left custom-icon" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223" />
+                        </svg>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next custom-carousel-control" type="button"
+                        data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-chevron-compact-right custom-icon" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671" />
+                        </svg>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

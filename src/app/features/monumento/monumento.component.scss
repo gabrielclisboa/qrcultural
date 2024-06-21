@@ -1,0 +1,31 @@
+p {
+    text-align: justify;
+}
+
+.custom-carousel-control {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.custom-icon {
+    font-size: 30px;
+    color: pink;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}

@@ -1,6 +1,13 @@
 <header class="mb-4">
-    <div class="position-relative">
-        <nav class="position-relative w-100 p-4"></nav>
-        <img class="position-absolute m-3" src="assets/prefeituralogo.png">
+  <nav class="p-4">
+    <div class="container-fluid position-relative">
+      <img [routerLink]="['/']" class="position-absolute m-3" src="assets/prefeituralogo.png">
+      <div class="d-flex justify-content-end">
+        <button *ngIf="!isLoggedIn" (click)="openModal()" type="button">Administração</button>
+        <button *ngIf="isLoggedIn" [routerLink]="['/cadastrar-monumento']" type="button">Inserir novo monumento</button>
+        <button *ngIf="isLoggedIn" (click)="logout()" type="button">Sair</button>
+      </div>
     </div>
+  </nav>
 </header>
+<app-toasts aria-live="polite" aria-atomic="true"></app-toasts>

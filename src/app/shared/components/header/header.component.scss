@@ -4,7 +4,29 @@ nav {
     background-color: $pink;
 }
 
-img{
+img {
     top: 0;
     left: 0;
+    cursor: pointer;
+}
+
+button {
+    background-color: $pinkButton;
+    border-style: none;
+    padding: 9px;
+    margin-left: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Adiciona sombra ao botão
+    transition: box-shadow 0.3s ease; // Transição suave para o efeito de sombra
+    color: #fff;
+    font-weight: 600;
+
+    &:hover {
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); // Sombra maior ao passar o mouse
+    }
+
+    &:focus {
+        outline: none; // Remove a borda padrão de foco do botão
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(0, 0, 0, 0.1); // Adiciona uma borda de foco sutil
+    }
 }
